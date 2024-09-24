@@ -1,0 +1,126 @@
+@font-face {
+  font-family: Commit;
+  src: url("./assets/commit-mono-vf.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: oblique 0deg 1deg;
+}
+
+:root {
+  --color: #333;
+  --background: #efefef;
+  --links: grey;
+  --line: #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #ccc;
+    --background: #222;
+    --links: grey;
+    --line: #333;
+  }
+}
+
+html {
+  font-family: Commit, system-ui, sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  scroll-behavior: smooth;
+  text-rendering: auto;
+  overflow-wrap: break-word;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background);
+  color: var(--color);
+}
+body {
+  margin: 0;
+}
+b, strong {
+  font-weight: bolder;
+}
+code, kbd, samp, pre {
+  font-family: ui-monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+table {
+  border-color: currentcolor;
+}
+
+.center-body {
+  /* User settings */
+  --max-width: 500px;
+  --margin-inline: 2rem;
+  --margin-block: 2rem;
+
+  /* Implementation */
+  box-sizing: border-box;
+  min-height: calc(100lvh - var(--margin-block) * 2);
+  margin-block: var(--margin-block);
+  margin-inline: var(--margin-inline);
+  display: grid;
+  grid-template-columns: minmax(0, var(--max-width));
+  justify-content: center;
+  align-content: start;
+}
+
+.main-header {
+  display: grid;
+  gap: .5rem;
+  border-bottom: solid 1px var(--line);
+  padding-bottom: 2rem;
+
+  img {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin: 0;
+    letter-spacing: -0.02em;
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+    color: var(--links);
+    margin: 0;
+    letter-spacing: -0.015em;
+  }
+}
+.main-intro {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 2em;
+  }
+
+  a {
+    color: var(--links);
+
+    &:hover {
+      color: currentColor;
+    }
+  }
+}

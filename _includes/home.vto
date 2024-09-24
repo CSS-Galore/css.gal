@@ -1,0 +1,15 @@
+---
+layout: ./base.vto
+---
+
+<main class="center-body">
+  <header class="main-header">
+    <img src="/assets/logo.svg" alt="Logo CSS Galore">
+    <h1>{{ title }}</h1>
+    <p>{{ subtitle }}</p>
+  </header>
+
+  <div class="main-intro">
+    {{ intro |> md }}
+  </div>
+</main>
