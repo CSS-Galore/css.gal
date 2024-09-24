@@ -2,13 +2,13 @@ layout: home.vto
 title: CSS Galore
 subtitle: The CSS code registry
 intro: |
-  Writing high quality CSS is not easy. And the reason is not that CSS is a complicated language (it's not easy either), but it's because CSS lacks something other languages have: a registry of reusable code packages. While JavaScript has NPM, PHP has Packagist, Rust has Crates, or Python has PyPI, in CSS you have to copy and paste code from specialized blogs, Stack Overflow, or keep your private collection of snippets.
+  Writing high quality CSS is not easy. And it is not that CSS is a complicated language (it's not easy either), but it's because CSS lacks something other languages have: a registry of reusable code packages. While JavaScript has NPM, PHP has Packagist, Rust has Crates, or Python has PyPI, in CSS you have to copy and paste code from blog posts, Stack Overflow, or keep your private collection of snippets.
 
-  You can use a CSS framework like Tailwind or Bootstrap, but if you want to do something unique, you may have to write all the styles from scratch or reuse styles from previous projects. Can you imagine if JavaScript, Rust, or Go developers couldn't import packages and had to implement everything from scratch? Well, that's what happens with CSS.
+  You can use a CSS framework like Tailwind or Bootstrap, but if you want to do something unique, you may have to write all the styles from scratch or reuse styles from previous projects. Can you imagine if JavaScript, Rust, or Go developers couldn't import packages and they had to implement everything from scratch? Well, that's what happens with CSS.
 
-  CSS Galore is a repository that allows you to import CSS pattern implementations easily. For now, it is an experimental project, created by [Óscar Otero](https://oscarotero.com), and it can be seen as the NPM for CSS, although due how CSS works, it isn't like the typical package manager.
+  **CSS Galore** is a repository that allows you to import CSS pattern easily. For now, it is an experimental project, created by [Óscar Otero](https://oscarotero.com), and it can be seen as the NPM for CSS, although due how CSS works, it is not like the typical package manager.
 
-  A model like NPM, where the imported code is stored in a separate directory (`node_modules`) and cannot be modified but updated using semantic versions, is too rigid for CSS, which requires much more flexibility and adaptability. That's why in CSS Galore, the code is added directly to your CSS file and becomes part of your code.
+  A model where the imported code is stored in a separate directory (say `css_modules`) and cannot be modified but updated using semantic versions, is too rigid for CSS, which requires much more flexibility and adaptability. That's why in CSS Galore, the code is added directly to your CSS file and becomes part of your code.
 
   ## Getting started
 
