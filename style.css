@@ -67,7 +67,7 @@ table {
 
 .center-body {
   /* User settings */
-  --max-width: 500px;
+  --max-width: 60ch;
   --margin-inline: 2rem;
   --margin-block: 2rem;
 
@@ -108,7 +108,7 @@ table {
 .main-intro {
   margin-top: 2rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: -0.015em;
 
   h2 {
