@@ -35,7 +35,7 @@ for (const pkg of packages) {
     });
     db.push([
       mod,
-      `${module.name} ${module.description} ${pkg.name}`.toLowerCase(),
+      `${pkg.name} ${pkg.description} ${module.name}`.toLowerCase(),
     ]);
   }
 }
