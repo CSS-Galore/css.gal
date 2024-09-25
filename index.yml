@@ -1,6 +1,7 @@
 layout: home.vto
 title: CSS Galore
-subtitle: The CSS code registry
+subtitle: The missing code registry for CSS
+screenshot: 
 intro: |
   Writing high quality CSS is not easy. And not because CSS is a complicated language (it's not easy either), but due the lack of something other languages have: **a registry of reusable packages**. While JavaScript has NPM, PHP has Packagist, Rust has Crates, or Python has PyPI, in CSS you have to copy and paste code from blog posts, Stack Overflow, or keep your collection of snippets.
 
@@ -16,4 +17,6 @@ intro: |
 
   ## Getting started
 
-  There will be a VS Code plugin.
+  ![screenshot](screenshot.png){transform-images="webp"}
+
+  [Install the VS Code plugin](vscode:extension/oscarotero.css-galore){.button}

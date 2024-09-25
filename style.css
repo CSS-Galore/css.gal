@@ -123,4 +123,62 @@ table {
       color: currentColor;
     }
   }
+
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+    & {
+      /* User settings */
+      --shadow-color: hsl(0deg 0% 0% / 0.075);
+    
+      /* Implementation */
+      box-shadow:
+        0 1px 1px var(--shadow-color),
+        0 2px 2px var(--shadow-color),
+        0 4px 4px var(--shadow-color),
+        0 8px 8px var(--shadow-color),
+        0 16px 16px var(--shadow-color);
+    }
+  }
+}
+.button {
+  &:where(
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    a
+  ),
+  &:where(input[type="file"])::file-selector-button {
+    /* User settings */
+    --_font: inherit;
+    --_color: var(--color);
+    --_background: var(--background);
+    --_border: solid 1px var(--line);
+    --_gap: 1em 2em;
+    border-radius: 6px;
+
+    /* Implementation */
+    font: var(--font);
+    font-weight: 700;
+    display: inline-flex;
+    gap: var(--_gap);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: var(--_border);
+    padding: var(--_gap);
+    text-decoration: none;
+    color: var(--_color);
+    background: var(--_background);
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:disabled,
+    &[aria-disabled="true"] {
+      cursor: default;
+      opacity: 0.33;
+      pointer-events: none;
+    }
+  }
 }
