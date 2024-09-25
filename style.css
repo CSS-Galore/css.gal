@@ -2,7 +2,7 @@
   font-family: Commit;
   src: url("./assets/commit-mono-vf.woff2") format("woff2");
   font-weight: 200 900;
-  font-style: oblique 0deg 1deg;
+  font-style: italic 0deg 1deg;
 }
 
 :root {
