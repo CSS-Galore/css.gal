@@ -9,7 +9,18 @@ layout: ./base.vto
     <p>{{ subtitle }}</p>
   </header>
 
+  <search id="search" class="search">
+    <form onsubmit="return false">
+      <label for="search-input" class="search-label">
+        Search CSS packages
+      </label>
+      <input type="search" name="query" id="search-input" class="search-input" placeholder="i.e. normalize, shape" autocomplete="off">
+    </form>
+  </search>
+
   <div class="main-intro">
     {{ intro |> md }}
   </div>
 </main>
+
+<script type="module" src="/api.js"></script>
