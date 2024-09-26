@@ -10,7 +10,7 @@ const site = lume({
 site.use(lighningcss());
 site.use(favicon());
 site.copy("assets");
-site.copy("api.js");
+site.copy([".js"]);
 site.use(picture());
 site.use(transformImages());
 

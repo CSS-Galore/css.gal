@@ -98,7 +98,8 @@ async function openPreview(pkg, module) {
   );
   push(nav, "a", { href: url, target: "_blank" }, "Open in new window");
 
-  const header = push(modal, "header", { class: "package" });
+  const pack = push(modal, "section", { class: "package" });
+  const header = push(pack, "header");
 
   push(header, "h2", { class: "package-name" }, `${pkg.name}/${module.name}`);
   push(header, "span", { class: "package-author" }, `by ${pkg.author.name}`);
@@ -109,36 +110,27 @@ async function openPreview(pkg, module) {
     convertUrlsToLinks(pkg.description),
   );
   push(
-    header,
+    pack,
     "p",
     { class: "package-module-description" },
     convertUrlsToLinks(module.description),
   );
+  const css = await (await fetch(url + ".css")).text();
+  const syntax = Prism.highlight(css, Prism.languages.css, "css");
+  const pre = push(pack, "pre", { class: "package-module-css language-css" }, `<code>${syntax}</code>`);
+  push(pre, "button", {
+    class: "copy",
+    onclick() {
+      navigator.clipboard.writeText(css);
+      this.textContent = "Copied!";
 
-  let html = await (await fetch(url)).text();
-  html += `<style hidden>
-    style:not([hidden]) {
-    display: block;
-    white-space: pre;
-    font-family: monospace;
-    font-size: 16px;
-    padding: 8px;
-    border: solid 1px #dcded3;
-    border-radius: 6px;
-    background: #f1f2ed;
-    margin: 2em;
-    color: #353633;
-    overflow-x: auto;
-  }
-  </style>
-  <script>
-    document.querySelectorAll("style:not([hidden])").forEach((style) => {
-      style.contentEditable = true;
-      style.spellcheck = false;
-    });
-  </script>`;
+      setTimeout(() => {
+        this.textContent = "Copy";
+      }, 2000);
+    }
+  }, "Copy");
 
-  push(modal, "iframe", { srcdoc: html });
+  push(modal, "iframe", { src: url });
 
   document.body.append(fragment);
   modal.showModal();
@@ -193,5 +185,8 @@ function dom(tag, attrs, ...children) {
 }
 
 function convertUrlsToLinks(text) {
-  return text.replaceAll(/(https?:\/\/[^\s]+)/g, "<a href='$1'>$1</a>");
+  return text
+    .trim()
+    .replaceAll("\n", "<br>")
+    .replaceAll(/(https?:\/\/[^\s]+)/g, "<a href='$1'>$1</a>");
 }
