@@ -117,7 +117,12 @@ async function openPreview(pkg, module) {
   );
   const css = await (await fetch(url + ".css")).text();
   const syntax = Prism.highlight(css, Prism.languages.css, "css");
-  const pre = push(pack, "pre", { class: "package-module-css language-css" }, `<code>${syntax}</code>`);
+  const pre = push(
+    pack,
+    "pre",
+    { class: "package-module-css language-css" },
+    `<code>${syntax}</code>`,
+  );
   push(pre, "button", {
     class: "copy",
     onclick() {
@@ -127,7 +132,7 @@ async function openPreview(pkg, module) {
       setTimeout(() => {
         this.textContent = "Copy";
       }, 2000);
-    }
+    },
   }, "Copy");
 
   push(modal, "iframe", { src: url });
