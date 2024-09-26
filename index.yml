@@ -18,6 +18,7 @@ intro: |
   ## Getting started
 
   For now, there's a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=oscarotero.css-galore) to search and insert any package of CSS Galore in your code. Just type `_css` to search the package by name and insert it.
-  ![screenshot](screenshot.png){transform-images="webp"}
+  
+  <video autoplay muted playsinline loop src="/screen.mp4"></video>
 
   [Install the VS Code plugin](vscode:extension/oscarotero.css-galore){.button}

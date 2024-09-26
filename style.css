@@ -140,7 +140,7 @@ a, button {
     border-radius: 3px;
   }
 
-  img {
+  video {
     max-width: 100%;
     border-radius: 6px;
     margin: 2em 0;
@@ -297,6 +297,7 @@ a, button {
   max-height: none;
   padding: 0;
   animation: showIn 200ms;
+  background-color: var(--background);
 
   /* User settings */
   --shadow-color: hsl(0deg 0% 0% / 0.075);
@@ -363,7 +364,7 @@ a, button {
     border: none;
     font: inherit;
     text-decoration: underline;
-    color: currentColor;
+    color: var(--color);
     cursor: pointer;
 
     &:hover {
