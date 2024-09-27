@@ -16,7 +16,7 @@ for (const pkg of packages) {
   push(
     li,
     "div",
-    { class: "package-description" },
+    { class: "package-description markdown" },
     md.render(pkg.description),
   );
 
@@ -104,15 +104,10 @@ async function openPreview(pkg, module) {
   push(
     header,
     "div",
-    { class: "package-description" },
-    md.render(pkg.description),
+    { class: "package-description markdown" },
+    md.render(pkg.description + "\n\n" + module.description),
   );
-  push(
-    pack,
-    "div",
-    { class: "package-module-description" },
-    md.render(module.description),
-  );
+  
   const css = await (await fetch(url + ".css")).text();
   const syntax = Prism.highlight(css, Prism.languages.css, "css");
   const pre = push(

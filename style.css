@@ -224,10 +224,6 @@ a, button {
 }
 .package-description {
   margin: 0.5em 0;
-  font-size: .9rem;
-  line-height: 1.4;
-  letter-spacing: -0.015em;
-  color: var(--gray);
 }
 .package-modules {
   list-style-type: "";
@@ -245,13 +241,6 @@ a, button {
   &:hover {
     text-decoration: none;
   }
-}
-.package-module-description {
-  margin: 0.5em 0;
-  font-size: .9rem;
-  line-height: 1.4;
-  letter-spacing: -0.015em;
-  color: var(--gray);
 }
 
 .search > form {
@@ -457,4 +446,20 @@ pre[class*="language-"] {
 }
 .token.entity {
   cursor: help;
+}
+
+.markdown {
+  font-size: .9rem;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: var(--gray);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--color);
+    }
+  }
 }
