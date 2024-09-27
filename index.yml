@@ -19,7 +19,7 @@ intro: |
 
   ## How to use it?
 
-  For now, there's a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=oscarotero.css-galore) to search and insert any module registered in CSS Galore. Just type `import/<package>/<module>` to insert the code automatically.
+  For now, there's a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=oscarotero.css-galore) to search and insert any module registered in CSS Galore. Just type `add/<package>/<module>` to insert the code automatically.
   
   <video autoplay muted playsinline loop src="/screen.mp4"></video>
 
