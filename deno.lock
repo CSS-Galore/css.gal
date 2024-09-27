@@ -411,7 +411,14 @@
     }
   },
   "remote": {
+    "https://cdn.jsdelivr.net/npm/entities@4.5.0/+esm": "7da8fa90cb0ee6d6cf1d7f7024a547bfec03003c97d2064988d5e4437a60572c",
     "https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.mjs": "785ebd37c9d10c4851f9981898762fdb7bd80d5a701739ed1c5247841b8162a3",
+    "https://cdn.jsdelivr.net/npm/linkify-it@5.0.0/+esm": "aec72797ed3a8ad943ba64ca2240ce21313df9a4c60addc171bc91bb61895b07",
+    "https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/+esm": "41c61f2e081274922a16f16181f1a9267e83c5c6a92b04e723386f050b6e42e0",
+    "https://cdn.jsdelivr.net/npm/mdurl@2.0.0/+esm": "f2a40fb80faee34bf00d89d41b9a875df718c05e027ee8ae4ab98a03a916dfce",
+    "https://cdn.jsdelivr.net/npm/punycode.js@2.3.1/+esm": "31fa74abeda9a5c5a5cad0d25f7dd4d92b3a9778148a675d4c5067c8d23025d4",
+    "https://cdn.jsdelivr.net/npm/uc.micro@2.0.0/+esm": "ec8056fabf05c48017d1bd156e4986a8c886b9ef58c72481cea050367d65f71b",
+    "https://cdn.jsdelivr.net/npm/uc.micro@2.1.0/+esm": "0ab30e19886d41defdb2a751e70a146cdb494ce6fc4a208282f22a11b723a34b",
     "https://deno.land/std@0.170.0/_util/asserts.ts": "d0844e9b62510f89ce1f9878b046f6a57bf88f208a10304aab50efcb48365272",
     "https://deno.land/std@0.170.0/_util/os.ts": "8a33345f74990e627b9dfe2de9b040004b08ea5146c7c9e8fe9a29070d193934",
     "https://deno.land/std@0.170.0/encoding/base64.ts": "8605e018e49211efc767686f6f687827d7f5fd5217163e981d8d693105640d7a",

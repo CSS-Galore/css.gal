@@ -1,8 +1,13 @@
-const packages = await (await fetch("https://api.css.gal")).json();
+import markdownIt from "https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/+esm";
 
+const md = markdownIt({
+  linkify: true,
+  typographer: true,
+  html: true,
+});
+const packages = await (await fetch("https://api.css.gal")).json();
 const tree = document.createDocumentFragment();
 const ul = push(tree, "ul", { class: "packages" });
-
 const db = [];
 
 for (const pkg of packages) {
@@ -10,15 +15,9 @@ for (const pkg of packages) {
   push(li, "strong", { class: "package-name" }, pkg.name);
   push(
     li,
-    "a",
-    { class: "package-author", href: pkg.author.url },
-    `by ${pkg.author.name}`,
-  );
-  push(
-    li,
-    "p",
+    "div",
     { class: "package-description" },
-    convertUrlsToLinks(pkg.description),
+    md.render(pkg.description),
   );
 
   const modules = push(li, "ul", { class: "package-modules" });
@@ -102,18 +101,17 @@ async function openPreview(pkg, module) {
   const header = push(pack, "header");
 
   push(header, "h2", { class: "package-name" }, `${pkg.name}/${module.name}`);
-  push(header, "span", { class: "package-author" }, `by ${pkg.author.name}`);
   push(
     header,
-    "p",
+    "div",
     { class: "package-description" },
-    convertUrlsToLinks(pkg.description),
+    md.render(pkg.description),
   );
   push(
     pack,
-    "p",
+    "div",
     { class: "package-module-description" },
-    convertUrlsToLinks(module.description),
+    md.render(module.description),
   );
   const css = await (await fetch(url + ".css")).text();
   const syntax = Prism.highlight(css, Prism.languages.css, "css");
@@ -174,7 +172,7 @@ function dom(tag, attrs, ...children) {
     }
 
     if (typeof child === "string") {
-      if (child.includes("</")) {
+      if (child.includes("<")) {
         el.append(
           ...new DOMParser().parseFromString(child, "text/html").body
             .childNodes,
@@ -187,11 +185,4 @@ function dom(tag, attrs, ...children) {
     }
   }
   return el;
-}
-
-function convertUrlsToLinks(text) {
-  return text
-    .trim()
-    .replaceAll("\n", "<br>")
-    .replaceAll(/(https?:\/\/[^\s]+)/g, "<a href='$1'>$1</a>");
 }

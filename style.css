@@ -219,23 +219,12 @@ a, button {
 .package-name {
   color: var(--color);
   font-size: 1.2rem;
-  display: inline-block;
+  display: block;
   margin: 0 1em 0 0;
-}
-.package-author {
-  display: inline-block;
-  font-size: 0.9rem;
-  font-style: normal;
-  color: var(--gray);
-  text-decoration: none;
-
-  &:where(a:hover) {
-    text-decoration: underline;
-  }
 }
 .package-description {
   margin: 0.5em 0;
-  font-size: 1em;
+  font-size: .9rem;
   line-height: 1.4;
   letter-spacing: -0.015em;
   color: var(--gray);
@@ -259,7 +248,7 @@ a, button {
 }
 .package-module-description {
   margin: 0.5em 0;
-  font-size: 1em;
+  font-size: .9rem;
   line-height: 1.4;
   letter-spacing: -0.015em;
   color: var(--gray);
